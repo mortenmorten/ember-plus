@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -15,8 +15,8 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +27,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>618; 612</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,6 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -56,6 +59,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +71,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -78,6 +83,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,37 +98,37 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BerLib\BerLib.csproj">
-      <Project>{5FC199CE-DA11-4D54-B52D-B9CEC1E3FF8E}</Project>
+      <Project>{5fc199ce-da11-4d54-b52d-b9cec1e3ff8e}</Project>
       <Name>BerLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmberLib.Framing\EmberLib.Framing.csproj">
-      <Project>{E4FD153D-6FF9-4AB4-927B-902E585BDE33}</Project>
+      <Project>{e4fd153d-6ff9-4ab4-927b-902e585bde33}</Project>
       <Name>EmberLib.Framing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EmberLib.Glow.Formula\EmberLib.Glow.Formula.VS2012.fsproj">
-      <Project>{CBED2DB9-7CCF-441F-A093-B8E45E71C95B}</Project>
-      <Name>EmberLib.Glow.Formula.VS2012</Name>
+    <ProjectReference Include="..\EmberLib.Glow.Formula\EmberLib.Glow.Formula.fsproj">
+      <Project>{cbed2db9-7ccf-441f-a093-b8e45e71c95b}</Project>
+      <Name>EmberLib.Glow.Formula</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmberLib.Glow.PowerPack\EmberLib.Glow.PowerPack.csproj">
       <Project>{038c790d-a88d-431c-9e38-a3e9da81b65c}</Project>
       <Name>EmberLib.Glow.PowerPack</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmberLib.Glow\EmberLib.Glow.csproj">
-      <Project>{71EF1E5C-4CA1-4C44-A091-0CA9F7609DAC}</Project>
+      <Project>{71ef1e5c-4ca1-4c44-a091-0ca9f7609dac}</Project>
       <Name>EmberLib.Glow</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmberLib.Legacy.Extensions\EmberLib.Legacy.Extensions.csproj">
-      <Project>{90C4D947-6E37-413B-B226-BCCB8101BCF1}</Project>
+      <Project>{90c4d947-6e37-413b-b226-bccb8101bcf1}</Project>
       <Name>EmberLib.Legacy.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmberLib\EmberLib.csproj">
-      <Project>{535D5B87-6DB7-41EB-A4EC-37A56C6352FB}</Project>
+      <Project>{535d5b87-6db7-41eb-a4ec-37a56c6352fb}</Project>
       <Name>EmberLib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
