@@ -17,3 +17,4 @@ documentation/~$ber+ Documentation.docx
 bin/
 obj/
 packages/
+*.user
