@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EmberLibNET.$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <licenseUrl>https://www.gnu.org/licenses/lgpl-2.1.en.html</licenseUrl>
+    <projectUrl>https://github.com/Lawo/ember-plus/wiki</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      A .NET implementation of the Ember+ protocol - an initiative of the Lawo Group. The protocol allows
+      for parameter exchange between devices, mostly targeting companies in the broadcast business.
+    </description>
+    <copyright>Copyright 2017</copyright>
+    <tags>EmBER managed</tags>
+  </metadata>
+</package>

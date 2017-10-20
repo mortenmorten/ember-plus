@@ -4,7 +4,9 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional Files", "Additional Files", "{2E9EC0AA-E1AD-46E6-ABE8-6BA723859E6A}"
 	ProjectSection(SolutionItems) = preProject
+		buildall.proj = buildall.proj
 		CopyToSvn.fsx = CopyToSvn.fsx
+		EmberLib.NET.nuspec = EmberLib.NET.nuspec
 		License.html = License.html
 	EndProjectSection
 EndProject

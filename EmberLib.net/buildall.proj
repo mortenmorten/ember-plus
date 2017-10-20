@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="BuildAll" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <ItemGroup>
+    <NugetProject Include="EmberLib\EmberLib.csproj" />
+    <NugetProject Include="EmberLib.Glow\EmberLib.Glow.csproj" />
+  </ItemGroup>
+
+  <Target Name="BuildAll" DependsOnTargets="BuildSolutions;PackNuget" />
+  
+  <Target Name="BuildSolutions">
+    <Message Text="MSBuildExtensionsPath32: $(MSBuildExtensionsPath32)" />
+    <MSBuild Projects="EmberLib.sln" Properties="Configuration=Debug" />
+    <MSBuild Projects="EmberLib.sln" Properties="Configuration=Release" />
+  </Target>
+
+  <Target Name="PackNuget">
+    <Exec Command="nuget pack %(NugetProject.Identity) -IncludeReferencedProjects -Prop Configuration=Release -OutputDirectory nupkg\" />
+  </Target>
+</Project>

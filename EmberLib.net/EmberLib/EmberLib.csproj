@@ -126,6 +126,7 @@
     </None>
     <None Include="Documentation\EmberLib.cd" />
     <None Include="Documentation\Ember.doc" />
+    <None Include="EmberLib.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\EmberLib.txt" />

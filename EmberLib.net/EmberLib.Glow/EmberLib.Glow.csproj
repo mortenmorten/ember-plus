@@ -171,6 +171,9 @@
     <None Include="Documentation\Ember+ Standard Parameters.docx" />
     <None Include="Documentation\EmberLib.Glow.cd" />
     <None Include="Documentation\GlowDtd.asn1" />
+    <None Include="EmberLib.Glow.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
